@@ -1,0 +1,9 @@
+<h2>Welcome to HackerNews!</h2>
+
+<ul>
+  <% @articles.each do |article| %>
+    <li>
+      <%= link_to article.title, article_path(article.id) %>
+    </li>
+  <% end %>
+</ul>
