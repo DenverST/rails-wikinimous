@@ -1,0 +1,10 @@
+<h2>Let's update <%= @article.title.upcase %> :)</h2>
+
+<%= form_for(@article) do |f| %>
+<%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+  <%= f.label :title %>
+  <%= f.text_field :title %>
+  <%= f.label :content %>
+  <%= f.text_field :content %>
+  <%= f.submit %>
+<% end %>
